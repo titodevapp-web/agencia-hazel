@@ -254,6 +254,14 @@
   .bigmark-wrap{overflow:hidden;margin-top:.18em}
   .bigmark{font-family:var(--font-sans);font-weight:900;font-size:clamp(70px,21vw,280px);line-height:.78;letter-spacing:-.035em;color:#000;will-change:transform}
 
+  /* ============ WhatsApp flutuante ============ */
+  .wa-float{position:fixed;right:clamp(16px,3vw,28px);bottom:clamp(16px,3vw,28px);z-index:70;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 28px rgba(0,0,0,.4);transition:transform .3s var(--e1),box-shadow .3s var(--e1);animation:waIn .5s var(--e1) .8s both}
+  .wa-float svg{width:31px;height:31px;fill:#fff;position:relative;z-index:1}
+  .wa-float:hover{transform:scale(1.1);box-shadow:0 14px 34px rgba(37,211,102,.45)}
+  .wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;z-index:0;animation:waPulse 2.6s ease-out infinite}
+  @keyframes waPulse{0%{transform:scale(1);opacity:.55}70%{transform:scale(1.9);opacity:0}100%{opacity:0}}
+  @keyframes waIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+
   /* ---------- reveal ---------- */
   [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .9s var(--e1) var(--d,0s),transform .9s var(--e1) var(--d,0s)}
   [data-reveal].in{opacity:1;transform:none}
@@ -267,6 +275,8 @@
     .loader{display:none!important}
     .logo:hover svg,.logo:hover img{transform:none}
     .logos:hover .logo{opacity:1}
+    .wa-float{animation:none}
+    .wa-float::after{display:none}
     html{scroll-behavior:auto}
   }
 </style>
@@ -482,15 +492,20 @@
       <div class="line"><span class="sq"></span><span data-i18n="cta_a1">Resposta em até 1 dia útil, direto com quem constrói.</span></div>
       <div class="line"><span class="sq"></span><span data-i18n="cta_a2">Atendimento em português, inglês e espanhol.</span></div>
       <div class="line"><span class="sq"></span><span data-i18n="cta_a3">Prefere agora? Chama no WhatsApp.</span></div>
-      <a class="btn wa" href="https://wa.me/5543996224923" target="_blank" rel="noopener" data-i18n="cta_wa">WhatsApp direto</a>
+      <a class="btn wa" href="https://wa.me/5543988412835" target="_blank" rel="noopener" data-i18n="cta_wa">WhatsApp direto</a>
     </div>
   </div>
   <div class="bottom">
     <span class="cw">© Agência Hazel · 2026 · PT · EN · ES</span>
-    <span class="cw"><a href="https://www.linkedin.com/in/nelsongrodrigues" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://wa.me/5543996224923" target="_blank" rel="noopener">WhatsApp</a></span>
+    <span class="cw"><a href="https://www.linkedin.com/in/nelsongrodrigues" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.instagram.com/agenciahazel.oficial" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/5543988412835" target="_blank" rel="noopener">WhatsApp</a></span>
   </div>
   <div class="bigmark-wrap"><div class="bigmark" data-par="-.05">HAZEL</div></div>
 </section>
+
+<!-- ============ WhatsApp flutuante ============ -->
+<a class="wa-float" href="https://wa.me/5543988412835?text=Ol%C3%A1%2C%20Hazel!%20Quero%20falar%20sobre%20a%20minha%20m%C3%A1quina%20de%20vendas." target="_blank" rel="noopener" aria-label="Falar no WhatsApp com a Agência Hazel">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 27l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C6.6 9.8 10.8 5.6 16 5.6S25.4 9.8 25.4 15 21.2 24.8 16 24.8zm5.4-7c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
 
 <script>
 (function(){
@@ -537,7 +552,7 @@
       cta_eyebrow:"CONTACT", cta_h2:"Have an operation that deserves to become a machine? Let's build it properly.", cta_sub:"A diagnosis of your funnel, your costs and what AI can automate end to end — marketing, sales and support.",
       f_nome:"Name", f_emp:"Company", f_cont:"WhatsApp or email", f_send:"Request a diagnosis",
       cta_a1:"Reply within one business day, straight from who builds it.", cta_a2:"Service in Portuguese, English and Spanish.", cta_a3:"Prefer now? Message us on WhatsApp.", cta_wa:"WhatsApp direct",
-      formmsg_ok:"Thanks! Opening WhatsApp to continue…", formmsg_err:"Please fill in your name and a contact."
+      formmsg_ok:"Got it! We'll get back to you shortly.", formmsg_err:"Please fill in your name and a contact.", formmsg_send:"Sending…"
     },
     es:{
       cred1:"MOTOR DE INGRESOS CON IA", cred2:"ESTD. 2023 · PT · EN · ES", cred3:"BRASIL · ORLANDO, FL",
@@ -576,7 +591,7 @@
       cta_eyebrow:"CONTACTO", cta_h2:"¿Tienes una operación que merece volverse máquina? Construyámosla bien.", cta_sub:"Un diagnóstico de tu embudo, tus costos y lo que la IA automatiza de punta a punta — marketing, ventas y soporte.",
       f_nome:"Nombre", f_emp:"Empresa", f_cont:"WhatsApp o email", f_send:"Solicitar diagnóstico",
       cta_a1:"Respuesta en hasta 1 día hábil, directo con quien construye.", cta_a2:"Atención en portugués, inglés y español.", cta_a3:"¿Prefieres ahora? Escríbenos por WhatsApp.", cta_wa:"WhatsApp directo",
-      formmsg_ok:"¡Gracias! Abriendo WhatsApp para continuar…", formmsg_err:"Completa tu nombre y un contacto, por favor."
+      formmsg_ok:"¡Recibido! Te respondemos en breve.", formmsg_err:"Completa tu nombre y un contacto, por favor.", formmsg_send:"Enviando…"
     }
   };
   var ptSnap={};
@@ -718,15 +733,34 @@
     ioo.observe(op);
   } else { playChat(); fillKanban(); }
 
-  /* ---------- form → WhatsApp ---------- */
-  document.getElementById("form").addEventListener("submit",function(e){
+  /* ---------- form -> email (hazelcomercial@gmail.com) ----------
+     Entrega automática na caixa de entrada via Web3Forms (gratuito, sem servidor).
+     Gere a access key em https://web3forms.com para o email hazelcomercial@gmail.com
+     e cole abaixo. Enquanto vazio, o formulário usa mailto: como alternativa. */
+  var W3F_KEY = "";
+  var DEST_EMAIL = "hazelcomercial@gmail.com";
+  var formEl = document.getElementById("form");
+  formEl.addEventListener("submit", function(e){
     e.preventDefault();
     var msg=document.getElementById("formmsg");
     var nome=document.getElementById("nome").value.trim(), empresa=document.getElementById("empresa").value.trim(), contato=document.getElementById("contato").value.trim();
     if(!nome||!contato){ msg.textContent=(DICT[current].formmsg_err)||"Preencha nome e um contato."; return; }
-    msg.textContent=(DICT[current].formmsg_ok)||"Obrigado! Abrindo o WhatsApp para continuar…";
-    var txt=encodeURIComponent("Olá, Hazel! Sou "+nome+(empresa?" ("+empresa+")":"")+". Contato: "+contato+". Quero um diagnóstico da minha máquina de vendas.");
-    setTimeout(function(){ window.open("https://wa.me/5543996224923?text="+txt,"_blank","noopener"); },500);
+    var okMsg=(DICT[current].formmsg_ok)||"Recebido! Retornamos em breve.";
+    var corpo="Novo lead pelo site da Agência Hazel\n\nNome: "+nome+"\nEmpresa: "+(empresa||"—")+"\nContato: "+contato;
+    function mailtoFallback(){
+      window.location.href="mailto:"+DEST_EMAIL+"?subject="+encodeURIComponent("Novo lead do site — "+nome)+"&body="+encodeURIComponent(corpo);
+    }
+    if(W3F_KEY){
+      msg.textContent=(DICT[current].formmsg_send)||"Enviando…";
+      fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+        body:JSON.stringify({access_key:W3F_KEY,subject:"Novo lead do site — "+nome,from_name:"Site Agência Hazel",nome:nome,empresa:empresa||"—",contato:contato,message:corpo})})
+        .then(function(r){return r.json();})
+        .then(function(j){ if(j&&j.success){ msg.textContent=okMsg; formEl.reset(); } else { mailtoFallback(); } })
+        .catch(function(){ mailtoFallback(); });
+    } else {
+      msg.textContent=okMsg;
+      setTimeout(mailtoFallback,300);
+    }
   });
 })();
 </script>
