@@ -327,8 +327,12 @@
   .cs .v{font-family:var(--font-sans);font-weight:900;font-size:clamp(18px,2.2vw,26px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
   .cs .v em{font-style:normal;color:var(--hazel)}
   .cs .k{font-family:var(--font-mono);font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--text-muted);line-height:1.35}
-  .case-notes{display:grid;gap:11px}
-  .case-notes li{font-size:13.5px;color:var(--text-muted)}
+  .case-notes{margin:0;padding:0;display:grid;gap:12px}
+  .case-notes li{display:grid;grid-template-columns:8px 1fr;gap:16px;align-items:start;list-style:none;font-size:13.5px;color:var(--text-muted)}
+  .case-notes li .sq{margin-top:6px}
+  .pcard .lnks{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:2px}
+  .pcard .lnk{font-family:var(--font-mono);font-size:11px;letter-spacing:.03em;color:var(--hazel);text-decoration:none}
+  .pcard .lnk:hover{text-decoration:underline}
 </style>
 
 <noscript><style>.loader{display:none!important}[data-reveal],.mask>*,.up,.wm-wrap .wordmark{opacity:1!important;transform:none!important}</style></noscript>
@@ -448,7 +452,7 @@
       </div>
       <p class="case-lead" data-i18n="case_mcs_lead">Do zero absoluto a uma operação rentável em 7 meses.</p>
       <div class="case-stats">
-        <div class="cs"><span class="v"><em>+713%</em></span><span class="k" data-i18n="case_roi">ROI · cenário otimista</span></div>
+        <div class="cs"><span class="v"><em>+713%</em></span><span class="k" data-i18n="case_roi">ROI · Retorno sobre o Investimento</span></div>
         <div class="cs"><span class="v">28,9x</span><span class="k">ROAS</span></div>
         <div class="cs"><span class="v">8,1x</span><span class="k" data-i18n="case_ret">retorno sobre o investido</span></div>
         <div class="cs"><span class="v">400+</span><span class="k" data-i18n="case_cli">clientes na base</span></div>
@@ -489,9 +493,11 @@
   </div>
   <div class="prova" data-stagger-parent>
     <div class="pcard" data-reveal><div class="lbl" data-i18n="pv1_l">AGENTES DE IA EM PRODUÇÃO</div><div class="big" data-i18n-html="pv1_b">Max &amp; <em>KIA</em></div><p data-i18n="pv1_p">Atendimento trilíngue, triagem e agendamento (Orlando) e qualificação de leads B2B (Brasil), rodando em operação real.</p></div>
-    <div class="pcard" data-reveal><div class="lbl" data-i18n="pv3_l">SEO + GEO/AEO</div><div class="big" data-i18n-html="pv3_b"><em>1º</em> no Google + LLMs</div><p data-i18n="pv3_p">Clientes no topo da busca tradicional e citados por ChatGPT e demais LLMs, com +500 artigos e dados estruturados.</p></div>
+    <div class="pcard" data-reveal><div class="lbl" data-i18n="pv3_l">SEO + GEO/AEO</div><div class="big" data-i18n-html="pv3_b"><em>1º</em> no Google + LLMs</div><p data-i18n="pv3_p">Clientes no topo da busca tradicional e citados por ChatGPT e demais LLMs, com +1.000 artigos e dados estruturados.</p></div>
     <div class="pcard" data-reveal><div class="lbl" data-i18n="pv5_l">CAPTAÇÃO P/ ARQUITETOS · PARCERIA KLIPS</div><div class="big" data-i18n-html="pv5_b">Aquisição + <em>Nutrição</em></div><p data-i18n="pv5_p">Programa de aquisição e nutrição com sistema web de formação de arquitetos, do primeiro contato à qualificação.</p></div>
-    <div class="pcard" data-reveal><div class="lbl" data-i18n="pv6_l">APPS E SISTEMAS WEB</div><div class="big" data-i18n-html="pv6_b">Produtos <em>sob medida</em></div><p data-i18n="pv6_p">Apps e sistemas web personalizados publicados nas lojas e em produção — Expo, Next.js, Supabase, Vercel.</p></div>
+    <div class="pcard" data-reveal><div class="lbl" data-i18n="pv6_l">APPS E SISTEMAS WEB</div><div class="big" data-i18n-html="pv6_b">Desenvolvimento de <em>Apps e Sistemas</em></div><p data-i18n="pv6_p">Apps e sistemas web personalizados publicados nas lojas e em produção — Expo, Next.js, Supabase, Vercel.</p></div>
+    <div class="pcard" data-reveal><div class="lbl" data-i18n="pv7_l">APP · GESTÃO DE IGREJAS</div><div class="big" data-i18n-html="pv7_b">Tito <em>App</em></div><p data-i18n="pv7_p">Aplicativo de gestão completa de igrejas, em operação no Brasil e na Europa.</p><div class="lnks"><a class="lnk" href="https://www.titoapp.eu/" target="_blank" rel="noopener">titoapp.eu ↗</a></div></div>
+    <div class="pcard" data-reveal><div class="lbl" data-i18n="pv8_l">PORTAIS DE NOTÍCIAS · CONTEÚDO EM ESCALA</div><div class="big" data-i18n-html="pv8_b">Escolas + Oficinas <em>Inteligentes</em></div><p data-i18n="pv8_p">Criadores dos portais de notícias — conteúdo, SEO e GEO em escala.</p><div class="lnks"><a class="lnk" href="https://www.escolasinteligentes.com/" target="_blank" rel="noopener">escolasinteligentes.com ↗</a><a class="lnk" href="https://www.oficinasinteligentes.com.br/" target="_blank" rel="noopener">oficinasinteligentes.com.br ↗</a></div></div>
   </div>
 </section>
 
@@ -618,7 +624,7 @@
     pt:{},
     en:{
       cred1:"AI REVENUE ENGINE", cred2:"ESTD. 2023 · PT · EN · ES", cred3:"BRAZIL · ORLANDO, FL",
-      nav_maquina:"THE MACHINE", nav_prova:"PROOF", nav_servicos:"SERVICES", nav_contato:"CONTACT", stack_lab:"TOOLS WE OPERATE", cases_eyebrow:"SUCCESS STORIES", cases_h2:"From a mechanic shop to a furniture store.", cases_desc:"The same sales machine — in any operation that wants to grow with method.", case_mcs_seg:"Auto repair shop · Orlando, FL", case_mcs_lead:"From absolute zero to a profitable operation in 7 months.", case_roi:"ROI · optimistic scenario", case_ret:"return on total investment", case_cli:"clients in the base", case_mcs_n1:"“MCS” became the #1 search term on Google", case_mcs_n2:"Cited by ChatGPT, Gemini and Claude (GEO/AEO)", case_mcs_n3:"Own loyalty app + trilingual service", case_klips_seg:"Furniture store · corporate furnishing", case_klips_lead:"A RevOps audit that redirected investment and unlocked the digital channel.", case_klips_s1:"return on the digital channel", case_klips_s2:"on the channel's CAC", case_klips_s3:"opportunities analyzed", case_klips_s4:"of revenue — from 14% of volume", case_klips_n1:"Two revenue engines split and measured", case_klips_n2:"Architect acquisition and nurturing program", case_klips_n3:"Redirected the quarter's investment allocation",
+      nav_maquina:"THE MACHINE", nav_prova:"PROOF", nav_servicos:"SERVICES", nav_contato:"CONTACT", stack_lab:"TOOLS WE OPERATE", cases_eyebrow:"SUCCESS STORIES", cases_h2:"From a mechanic shop to a furniture store.", cases_desc:"The same sales machine — in any operation that wants to grow with method.", case_mcs_seg:"Auto repair shop · Orlando, FL", case_mcs_lead:"From absolute zero to a profitable operation in 7 months.", case_roi:"ROI · Return on Investment", case_ret:"return on total investment", case_cli:"clients in the base", case_mcs_n1:"“MCS” became the #1 search term on Google", case_mcs_n2:"Cited by ChatGPT, Gemini and Claude (GEO/AEO)", case_mcs_n3:"Own loyalty app + trilingual service", case_klips_seg:"Furniture store · corporate furnishing", case_klips_lead:"A RevOps audit that redirected investment and unlocked the digital channel.", case_klips_s1:"return on the digital channel", case_klips_s2:"on the channel's CAC", case_klips_s3:"opportunities analyzed", case_klips_s4:"of revenue — from 14% of volume", case_klips_n1:"Two revenue engines split and measured", case_klips_n2:"Architect acquisition and nurturing program", case_klips_n3:"Redirected the quarter's investment allocation", pv7_l:"APP · CHURCH MANAGEMENT", pv7_b:"Tito <em>App</em>", pv7_p:"A complete church-management app, live in Brazil and Europe.", pv8_l:"NEWS PORTALS · CONTENT AT SCALE", pv8_b:"Escolas + Oficinas <em>Inteligentes</em>", pv8_p:"Creators of the news portals — content, SEO and GEO at scale.",
       hero_eyebrow:"AI SALES-MACHINE AGENCY",
       hero_h1:"We build <em>sales machines</em> that unify marketing, sales and retention.",
       hero_lead:"And we <b>defend the number</b> the automation moves — from AI agents in production to unit-economics audits.",
@@ -633,10 +639,10 @@
       prova_eyebrow:"REAL PROOF, NOT PROMISES", prova_h2:"What we've already built.", prova_desc:"Live operations in Brazil and the US — agents, revenue, ranking and products.",
       pv1_l:"AI AGENTS IN PRODUCTION", pv1_b:"Max &amp; <em>KIA</em>", pv1_p:"Trilingual front-desk, triage and scheduling (Orlando) and B2B lead qualification (Brazil), running in real operation.",
       pv2_l:"REVOPS AUDIT · KLIPS", pv2_b:"<em>924</em> deals · R$ 3.58M", pv2_p:"14% of volume driving 75% of revenue, and digital-channel CAC corrected from R$1,639 to R$987 (1.67x).",
-      pv3_l:"SEO + GEO/AEO", pv3_b:"<em>#1</em> on Google + LLMs", pv3_p:"Clients ranking first on Google and cited by ChatGPT and other LLMs, with 500+ articles and structured data.",
+      pv3_l:"SEO + GEO/AEO", pv3_b:"<em>#1</em> on Google + LLMs", pv3_p:"Clients ranking first on Google and cited by ChatGPT and other LLMs, with 1,000+ articles and structured data.",
       pv4_l:"DIGITAL TRANSFORMATION · MCS MECHANICAL", pv4_b:"Branding + <em>Machine</em>", pv4_p:"Branding and positioning plus a full lead capture and nurturing machine for the US operation.",
       pv5_l:"ARCHITECT ACQUISITION · KLIPS PARTNERSHIP", pv5_b:"Acquisition + <em>Nurturing</em>", pv5_p:"An acquisition and nurturing program with a web platform for architect training, from first touch to qualification.",
-      pv6_l:"APPS & WEB SYSTEMS", pv6_b:"Custom <em>products</em>", pv6_p:"Custom apps and web systems published to the stores and in production — Expo, Next.js, Supabase, Vercel.",
+      pv6_l:"APPS & WEB SYSTEMS", pv6_b:"<em>App & system</em> development", pv6_p:"Custom apps and web systems published to the stores and in production — Expo, Next.js, Supabase, Vercel.",
       svc_h2:"The engines, opened up.", svc_desc:"Each engine of the machine and the engineering-and-data base that powers them all.",
       svc_r1:"// generates demand", svc_r2:"// converts", svc_r3:"// retains & grows", svc_r4:"// engineering + data", svc_h_ia:"AI & Automation · Revenue Intelligence",
       svc_m1:"Multilingual paid media (Meta & Google Ads)", svc_m2:"Technical SEO + GEO/AEO for generative search", svc_m3:"Content at scale and conversion copy", svc_m4:"Landing pages and capture assets",
@@ -657,7 +663,7 @@
     },
     es:{
       cred1:"MOTOR DE INGRESOS CON IA", cred2:"ESTD. 2023 · PT · EN · ES", cred3:"BRASIL · ORLANDO, FL",
-      nav_maquina:"LA MÁQUINA", nav_prova:"PRUEBA", nav_servicos:"SERVICIOS", nav_contato:"CONTACTO", stack_lab:"HERRAMIENTAS QUE OPERAMOS", cases_eyebrow:"CASOS DE ÉXITO", cases_h2:"Del taller mecánico a la tienda de muebles.", cases_desc:"La misma máquina de ventas — en cualquier operación que quiera crecer con método.", case_mcs_seg:"Taller mecánico · Orlando, FL", case_mcs_lead:"De cero absoluto a una operación rentable en 7 meses.", case_roi:"ROI · escenario optimista", case_ret:"retorno sobre lo invertido", case_cli:"clientes en la base", case_mcs_n1:"“MCS” se volvió el término nº 1 de búsqueda en Google", case_mcs_n2:"Citada por ChatGPT, Gemini y Claude (GEO/AEO)", case_mcs_n3:"App propia de fidelización + atención trilingüe", case_klips_seg:"Tienda de muebles · mobiliario corporativo", case_klips_lead:"Auditoría de RevOps que redirigió la inversión y destrabó el canal digital.", case_klips_s1:"retorno en el canal digital", case_klips_s2:"en el CAC del canal", case_klips_s3:"oportunidades analizadas", case_klips_s4:"de los ingresos — desde 14% del volumen", case_klips_n1:"Dos motores de ingresos separados y medidos", case_klips_n2:"Programa de captación y nutrición de arquitectos", case_klips_n3:"Redirigió la asignación de inversión del trimestre",
+      nav_maquina:"LA MÁQUINA", nav_prova:"PRUEBA", nav_servicos:"SERVICIOS", nav_contato:"CONTACTO", stack_lab:"HERRAMIENTAS QUE OPERAMOS", cases_eyebrow:"CASOS DE ÉXITO", cases_h2:"Del taller mecánico a la tienda de muebles.", cases_desc:"La misma máquina de ventas — en cualquier operación que quiera crecer con método.", case_mcs_seg:"Taller mecánico · Orlando, FL", case_mcs_lead:"De cero absoluto a una operación rentable en 7 meses.", case_roi:"ROI · Retorno sobre la Inversión", case_ret:"retorno sobre lo invertido", case_cli:"clientes en la base", case_mcs_n1:"“MCS” se volvió el término nº 1 de búsqueda en Google", case_mcs_n2:"Citada por ChatGPT, Gemini y Claude (GEO/AEO)", case_mcs_n3:"App propia de fidelización + atención trilingüe", case_klips_seg:"Tienda de muebles · mobiliario corporativo", case_klips_lead:"Auditoría de RevOps que redirigió la inversión y destrabó el canal digital.", case_klips_s1:"retorno en el canal digital", case_klips_s2:"en el CAC del canal", case_klips_s3:"oportunidades analizadas", case_klips_s4:"de los ingresos — desde 14% del volumen", case_klips_n1:"Dos motores de ingresos separados y medidos", case_klips_n2:"Programa de captación y nutrición de arquitectos", case_klips_n3:"Redirigió la asignación de inversión del trimestre", pv7_l:"APP · GESTIÓN DE IGLESIAS", pv7_b:"Tito <em>App</em>", pv7_p:"App de gestión completa de iglesias, en operación en Brasil y Europa.", pv8_l:"PORTALES DE NOTICIAS · CONTENIDO A ESCALA", pv8_b:"Escolas + Oficinas <em>Inteligentes</em>", pv8_p:"Creadores de los portales de noticias — contenido, SEO y GEO a escala.",
       hero_eyebrow:"AGENCIA DE MÁQUINAS DE VENTAS CON IA",
       hero_h1:"Construimos <em>máquinas de ventas</em> que integran marketing, ventas y retención.",
       hero_lead:"Y <b>defendemos el número</b> que la automatización mueve — de agentes de IA en producción a auditoría de unit economics.",
@@ -672,10 +678,10 @@
       prova_eyebrow:"PRUEBA REAL, NO PROMESAS", prova_h2:"Lo que ya pusimos de pie.", prova_desc:"Operaciones reales en Brasil y EE. UU. — agentes, ingresos, ranking y productos.",
       pv1_l:"AGENTES DE IA EN PRODUCCIÓN", pv1_b:"Max &amp; <em>KIA</em>", pv1_p:"Atención trilingüe, triaje y agendamiento (Orlando) y calificación de leads B2B (Brasil), en operación real.",
       pv2_l:"AUDITORÍA REVOPS · KLIPS", pv2_b:"<em>924</em> oport. · R$ 3,58M", pv2_p:"14% del volumen generando 75% de la facturación, y CAC del canal digital corregido de R$1.639 a R$987 (1,67x).",
-      pv3_l:"SEO + GEO/AEO", pv3_b:"<em>1º</em> en Google + LLMs", pv3_p:"Clientes en el primer lugar de Google y citados por ChatGPT y otros LLM, con +500 artículos y datos estructurados.",
+      pv3_l:"SEO + GEO/AEO", pv3_b:"<em>1º</em> en Google + LLMs", pv3_p:"Clientes en el primer lugar de Google y citados por ChatGPT y otros LLM, con +1.000 artículos y datos estructurados.",
       pv4_l:"TRANSFORMACIÓN DIGITAL · MCS MECHANICAL", pv4_b:"Branding + <em>Máquina</em>", pv4_p:"Branding y posicionamiento más una máquina completa de captación y nutrición de leads para la operación en EE. UU.",
       pv5_l:"CAPTACIÓN P/ ARQUITECTOS · ALIANZA KLIPS", pv5_b:"Adquisición + <em>Nutrición</em>", pv5_p:"Un programa de adquisición y nutrición con sistema web de formación de arquitectos, del primer contacto a la calificación.",
-      pv6_l:"APPS Y SISTEMAS WEB", pv6_b:"Productos <em>a medida</em>", pv6_p:"Apps y sistemas web personalizados publicados en las tiendas y en producción — Expo, Next.js, Supabase, Vercel.",
+      pv6_l:"APPS Y SISTEMAS WEB", pv6_b:"Desarrollo de <em>apps y sistemas</em>", pv6_p:"Apps y sistemas web personalizados publicados en las tiendas y en producción — Expo, Next.js, Supabase, Vercel.",
       svc_h2:"Los motores, por dentro.", svc_desc:"Cada motor de la máquina y la base de ingeniería y datos que sostiene a todos.",
       svc_r1:"// genera demanda", svc_r2:"// convierte", svc_r3:"// retiene y fideliza", svc_r4:"// ingeniería + datos", svc_h_ia:"IA y Automatización · Inteligencia de Ingresos",
       svc_m1:"Medios pagos multilingües (Meta y Google Ads)", svc_m2:"SEO técnico + GEO/AEO para búsqueda generativa", svc_m3:"Contenido a escala y copy de conversión", svc_m4:"Landing pages y activos de captación",
