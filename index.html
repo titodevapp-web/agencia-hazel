@@ -468,6 +468,12 @@
   /* ---- como v4: premium branco ---- */
   .prob-intro{color:#5a544c;max-width:64ch;font-size:clamp(16px,2vw,20px);line-height:1.55;margin-top:clamp(18px,3vw,28px)}
   .prob-card .step-num{font-family:var(--font-cond);font-size:40px;line-height:1;color:var(--hazel);margin-bottom:14px;letter-spacing:.02em}
+
+  /* ---- hero centralizado v5 ---- */
+  .hero{align-items:center;text-align:center;padding-bottom:clamp(40px,8vw,90px)}
+  .hero h1{margin-inline:auto;max-width:20ch}
+  .hero .lead{margin-inline:auto}
+  .hero .btn-row{justify-content:center}
 </style>
 
 <noscript><style>.loader{display:none!important}[data-reveal],.mask>*,.up,.wm-wrap .wordmark{opacity:1!important;transform:none!important}</style></noscript>
@@ -500,7 +506,7 @@
     <a class="btn btn-ghost" href="#resultados" data-i18n="hero_cta2">Ver resultados</a>
   </div>
   <p class="up" style="margin-top:16px;font-family:var(--font-mono);font-size:clamp(12px,1.4vw,13.5px);letter-spacing:.04em;color:var(--text-dim)" data-i18n="hero_support">Atendemos no Brasil e nos Estados Unidos, em português, inglês e espanhol.</p>
-  <div class="wm-wrap"><div class="wordmark" data-par="-.06">HAZEL</div></div>
+  
 </header>
 
 <!-- ============ O QUE TRAVA ============ -->
@@ -875,7 +881,7 @@
         else { el.style.transform="translateY("+(prog*sp*180)+"px)"; }
       });
     }
-    if(y>lastY && y>360) nav.classList.add("hide"); else nav.classList.remove("hide");
+    nav.classList.remove("hide");
     lastY=y;
     var cur=null;
     secs.forEach(function(s,i){ if(s){ var r=s.getBoundingClientRect(); if(r.top<=vh*0.4 && r.bottom>=vh*0.4) cur=i; } });
