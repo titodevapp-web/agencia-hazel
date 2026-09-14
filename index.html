@@ -464,6 +464,10 @@
   .confer .cf h4{font-size:17px;font-weight:700;color:#0C0B0A;letter-spacing:-.01em}
   .confer .cf p{color:#5a544c;font-size:13.5px;line-height:1.55}
   .confer .cf a{color:var(--hazel);font-family:var(--font-mono);font-size:12px;letter-spacing:.03em}
+
+  /* ---- como v4: premium branco ---- */
+  .prob-intro{color:#5a544c;max-width:64ch;font-size:clamp(16px,2vw,20px);line-height:1.55;margin-top:clamp(18px,3vw,28px)}
+  .prob-card .step-num{font-family:var(--font-cond);font-size:40px;line-height:1;color:var(--hazel);margin-bottom:14px;letter-spacing:.02em}
 </style>
 
 <noscript><style>.loader{display:none!important}[data-reveal],.mask>*,.up,.wm-wrap .wordmark{opacity:1!important;transform:none!important}</style></noscript>
@@ -606,15 +610,15 @@
 </section>
 
 <!-- ============ COMO FUNCIONA ============ -->
-<section class="wrap diff" id="como-funciona">
-  <div class="sec-head"><h2><span class="js-split" data-i18n="como_h2">Como funciona, sem promessa furada.</span></h2></div>
-  <p class="intro" data-reveal data-i18n="como_intro">A gente não vai dobrar o seu faturamento em dois meses. Quem promete isso está mais preocupado em vender do que em entregar. O que dá para fazer é construir, mês a mês, uma operação que cresce e que você consegue enxergar.</p>
-  <div class="layers">
-    <div class="layer" data-reveal><span class="idx">01</span><h3 data-i18n="como_1h">Diagnóstico e montagem (primeiro mês)</h3><p data-i18n="como_1p">A gente olha quanto você gasta hoje, de onde vêm seus clientes e onde eles estão se perdendo. Monta os anúncios, as páginas e o atendente digital. No fim do mês você já tem os primeiros números reais.</p></div>
-    <div class="layer" data-reveal data-d=".1s"><span class="idx">02</span><h3 data-i18n="como_2h">Ajuste (segundo e terceiro mês)</h3><p data-i18n="como_2p">Aqui a gente descobre o que funciona e o que não funciona. Corta o que dá prejuízo, reforça o que dá lucro e arruma o atendimento onde estiver escapando venda.</p></div>
-    <div class="layer" data-reveal data-d=".2s"><span class="idx">03</span><h3 data-i18n="como_3h">Crescimento (a partir do quarto mês)</h3><p data-i18n="como_3p">Com a conta fechando, aumenta o investimento em cima do que já se provou. O foco passa a ser o serviço que dá mais margem, não o que dá mais volume.</p></div>
+<section class="wrap prob" id="como-funciona">
+  <h2 class="prob-h"><span class="js-split" data-i18n="como_h2">Como funciona, sem promessa furada.</span></h2>
+  <p class="prob-intro" data-reveal data-i18n="como_intro">A gente não vai dobrar o seu faturamento em dois meses. Quem promete isso está mais preocupado em vender do que em entregar. O que dá para fazer é construir, mês a mês, uma operação que cresce e que você consegue enxergar.</p>
+  <div class="prob-grid">
+    <div class="prob-card" data-reveal><div class="step-num">01</div><h3 data-i18n="como_1h">Diagnóstico e montagem (primeiro mês)</h3><p data-i18n="como_1p">A gente olha quanto você gasta hoje, de onde vêm seus clientes e onde eles estão se perdendo. Monta os anúncios, as páginas e o atendente digital. No fim do mês você já tem os primeiros números reais.</p></div>
+    <div class="prob-card" data-reveal data-d=".1s"><div class="step-num">02</div><h3 data-i18n="como_2h">Ajuste (segundo e terceiro mês)</h3><p data-i18n="como_2p">Aqui a gente descobre o que funciona e o que não funciona. Corta o que dá prejuízo, reforça o que dá lucro e arruma o atendimento onde estiver escapando venda.</p></div>
+    <div class="prob-card" data-reveal data-d=".2s"><div class="step-num">03</div><h3 data-i18n="como_3h">Crescimento (a partir do quarto mês)</h3><p data-i18n="como_3p">Com a conta fechando, aumenta o investimento em cima do que já se provou. O foco passa a ser o serviço que dá mais margem, não o que dá mais volume.</p></div>
   </div>
-  <p class="tag" data-reveal data-i18n="como_fecho">Pular etapa costuma dar frustração. Respeitar o processo é o que sustenta crescimento de verdade.</p>
+  <div class="prob-close" data-reveal><p data-i18n="como_fecho">Pular etapa costuma dar frustração. Respeitar o processo é o que sustenta crescimento de verdade.</p></div>
 </section>
 
 <!-- ============ VOCÊ DEVE ESTAR PENSANDO ============ -->
@@ -950,8 +954,8 @@
   } else { splitEls.forEach(function(el){ el.classList.add('in'); }); }
 
   /* ============ Nav contraste sobre a Prova (bone) ============ */
-  var provaSec=document.getElementById('trava');
-  function navContrast(){ if(!provaSec)return; var r=provaSec.getBoundingClientRect(); if(r.top<70 && r.bottom>16){ nav.classList.add('on-light'); } else { nav.classList.remove('on-light'); } }
+  var lightSecs=['trava','como-funciona'].map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function navContrast(){ var on=false; lightSecs.forEach(function(s){ var r=s.getBoundingClientRect(); if(r.top<70 && r.bottom>16) on=true; }); nav.classList.toggle('on-light',on); }
   addEventListener('scroll',navContrast,{passive:true}); navContrast();
 
   /* ============ Cursor customizado (desktop) ============ */
