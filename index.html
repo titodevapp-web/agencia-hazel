@@ -499,7 +499,7 @@
 <!-- ============ HERO ============ -->
 <header class="wrap hero" id="topo">
   <canvas id="bg" aria-hidden="true"></canvas>
-  <h1 class="up" data-i18n-html="hero_h1">Você investe em marketing e ninguém te diz <em>se deu lucro</em>.</h1>
+  <h1 class="js-split" data-i18n-html="hero_h1">Você investe em marketing e ninguém te diz <em>se deu lucro</em>.</h1>
   <p class="lead up" data-i18n-html="hero_lead">A gente entrega o que a maioria não entrega: <b>o número</b>. Quanto entrou, quanto virou venda, qual canal paga e qual não paga.</p>
   <div class="btn-row up">
     <a class="btn btn-primary" href="https://wa.me/5543988412835?text=Ol%C3%A1%2C%20Hazel!%20Quero%20entender%20onde%20minha%20empresa%20est%C3%A1%20perdendo%20venda." target="_blank" rel="noopener" data-i18n="hero_cta1">Quero saber onde estou perdendo venda</a>
@@ -942,12 +942,10 @@
 
   /* ============ Reveal de texto por palavra ============ */
   function splitWords(el){
-    var text=el.textContent; el.textContent=''; var wi=0;
-    text.split(/(\s+)/).forEach(function(tok){
-      if(tok==='')return;
-      if(/^\s+$/.test(tok)){ el.appendChild(document.createTextNode(tok)); }
-      else { var s=document.createElement('span'); s.className='wd'; s.style.setProperty('--wi',wi++); s.textContent=tok; el.appendChild(s); }
-    });
+    if(el.querySelector && el.querySelector('.wd')){ el.querySelectorAll('.wd').forEach(function(w){ w.replaceWith(document.createTextNode(w.textContent)); }); el.normalize(); }
+    var nodes=[].slice.call(el.childNodes); el.innerHTML=''; var wi=0;
+    function addText(t,text){ text.split(/(\s+)/).forEach(function(tok){ if(tok==='')return; if(/^\s+$/.test(tok)){ t.appendChild(document.createTextNode(tok)); } else { var s=document.createElement('span'); s.className='wd'; s.style.setProperty('--wi',wi++); s.textContent=tok; t.appendChild(s); } }); }
+    nodes.forEach(function(node){ if(node.nodeType===3){ addText(el,node.nodeValue); } else { var c=node.cloneNode(false); el.appendChild(c); addText(c,node.textContent); } });
   }
   window.__resplit=function(){ if(reduce)return; [].slice.call(document.querySelectorAll('.js-split')).forEach(splitWords); };
   var splitEls=[].slice.call(document.querySelectorAll('.js-split'));
